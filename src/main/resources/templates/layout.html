@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(title, pageStyles, content)">
+<head>
+    <meta charset="UTF-8">
+    <title th:replace="${title}">Base Title</title>
+    <link rel="stylesheet" th:href="@{/css/base.css}">
+    <th:block th:replace="${pageStyles}"></th:block>
+</head>
+<body>
+<main class="container" th:replace="${content}">
+    Base content
+</main>
+</body>
+</html>
