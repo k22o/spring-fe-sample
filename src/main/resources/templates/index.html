@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: layout(~{::title}, ~{::link}, ~{::main})}">
+<head>
+    <title>Todo Sample</title>
+    <link rel="stylesheet" th:href="@{/css/todo.css}">
+</head>
+<body>
+<main class="container">
+    <h1>Todo一覧</h1>
+
+    <form th:action="@{/todos}" method="post" class="todo-form">
+        <input type="text" name="title" placeholder="やることを入力" required>
+        <button type="submit">追加</button>
+    </form>
+
+    <ul class="todo-list">
+        <li th:each="todo : ${todos}" th:text="${todo.title()}"></li>
+        <li th:if="${todos.isEmpty()}" class="empty">まだTodoがありません</li>
+    </ul>
+</main>
+</body>
+</html>

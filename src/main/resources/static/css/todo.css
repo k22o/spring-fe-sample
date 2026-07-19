@@ -1,0 +1,36 @@
+.todo-form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.todo-form input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.todo-form button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background: #3b82f6;
+    color: #fff;
+    cursor: pointer;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-list li {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.todo-list .empty {
+    color: #999;
+}
