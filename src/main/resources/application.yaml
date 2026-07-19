@@ -1,3 +1,13 @@
 spring:
   application:
     name: spring-fe-sample
+
+external:
+  todo-api:
+    base-url: https://example.com
+    connect-timeout: 3s
+    read-timeout: 5s
+
+logging:
+  level:
+    root: INFO
